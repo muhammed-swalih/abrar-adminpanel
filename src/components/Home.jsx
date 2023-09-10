@@ -46,7 +46,7 @@ function Home() {
               <div className=' w-[500px] h-32  mx-auto rounded-2xl border border-1 border-gray-400'>
               <h1 className=' uppercase text-center text-white text-xl my-3 flex gap-2  justify-center'>Remove destinations <span><img className=' mt-1' src={cross} alt="" /></span></h1>
               <div className=' flex flex-wrap px-4 py-2 gap-5'>
-                    <div onClick={handleDltHoneymoon} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>honeymoon package</div>
+                    <div onClick={handleDltHoneymoon} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>package</div>
                     <div onClick={handleDltAds} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>ads</div>
                 </div>
               </div>

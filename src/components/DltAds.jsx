@@ -5,13 +5,13 @@ function DltHoneymoon() {
     const [honeymoon, setHoneymoon] = useState([]);
 
     const fetchHoneymoon = async () => {
-        const response = await axios.get('https://flygreenzholidays.onrender.com/packages/getAd')
+        const response = await axios.get('https://wings-52gz.onrender.com/ads')
         setHoneymoon(response.data)
 
     }
 
     const handleDelete = (id) => {
-        fetch(`https://flygreenzholidays.onrender.com/packages/deleteAd/${id}`, {
+        fetch(`https://wings-52gz.onrender.com/ads/${id}`, {
             method: "DELETE"
         })
             .then((response) => response.json())
@@ -33,14 +33,11 @@ function DltHoneymoon() {
  
             <div className=' w-[1150px] h-auto  px-10'>
 
-                {honeymoon.map((items) => {
-                    const base64String = btoa(
-                        String.fromCharCode(...new Uint32Array((items.image.data.data)))
-                    )
+                {honeymoon.map((items,index) => {
                     return (
-                        <div className=' my-[100px] flex justify-start gap-10 '>
+                        <div key={index} className=' my-[100px] flex justify-start gap-10 '>
                             <div className=' rounded-3xl w-80 h-80 bg-white'>
-                                <img className=' rounded-3xl w-full h-full object-cover' src={`data:image/jpeg;base64,${base64String}`} alt="" />
+                                <img className=' rounded-3xl w-full h-full object-cover' src={`${items.picUrl}`} alt="" />
                             </div>
                             <div className=' my-auto'>
                               

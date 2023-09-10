@@ -2,29 +2,20 @@ import React, { useState } from 'react'
 import bg from '../assets/bg.png'
 function HoneyMoon() {
 
-    const [place, setPlace] = useState("");
-    const [price, setPrice] = useState("");
-    const [days, setDays] = useState("");
-    const [highlights1, setHighlights1] = useState("");
-    const [highlights2, setHighlights2] = useState("");
-    const [highlights3, setHighlights3] = useState("");
-    const [highlights4, setHighlights4] = useState("");
-    const [highlights5, setHighlights5] = useState("");
-    const [highlights6, setHighlights6] = useState("");
-    const [description, setDescription] = useState("");
+    
     const [testImage, setImage] = useState(null);
 
     const handleSubmit = async (event) => {
-        if(testImage.length ==0){
+        if(testImage.length ===0){
             alert ('please fill the required fields')
         }else {
 
             event.preventDefault();
             const formData = new FormData();
-            formData.append("testImage", testImage);
+            formData.append("pic", testImage);
     
             try {
-                const response = await fetch("https://flygreenzholidays.onrender.com/packages/ads", {
+                const response = await fetch("https://wings-52gz.onrender.com/ads", {
                     method: "POST",
                     body: formData,
                 });
@@ -38,7 +29,7 @@ function HoneyMoon() {
         }
     };
 
-    const rows = Math.max(3, Math.ceil(description.length / 50))
+
     return (
         <div className=' w-full min-h-screen h-auto bg-gray-900 bg-cover pt-16' style={{ backgroundImage: `url(${bg})` }}>
             <h1 className='uppercase text-2xl font-medium text-white text-center '>add ads </h1>
