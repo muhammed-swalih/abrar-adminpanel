@@ -31,7 +31,7 @@ function Home() {
     <div className=' flex justify-center items-center w-full h-auto min-h-screen bg-slate-900 bg-cover pt-20' style={{ backgroundImage: `url(${bg})` }} >
       <div className=' my-auto flex flex-col w-[1150px] h-auto mx-auto '>
           <div className=' flex flex-col gap-2'>
-              <h1 className=' text-white text-3xl '>FlyGreenz</h1>
+              <h1 className=' text-white text-3xl '>Abrar Travel Wings</h1>
               <h1 className=' text-white text-5xl '>Dashboard</h1>
           </div>
           <div className=' w-[1150px] flex justify-between gap-3 mx-auto mt-10'>
